@@ -1,0 +1,15 @@
+﻿@model Settings
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <form asp-controller="Settings" asp-action="ChangeDatabase">
+            <select name="DatabaseType" asp-for="DatabaseType" asp-items="Html.GetEnumSelectList<DatabaseType>()" class="form-control"></select>
+            <button type="submit" class="btn btn-outline-success mt-3">Save</button>
+        </form>
+    </div>
+</div>
+

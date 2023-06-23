@@ -8,7 +8,8 @@ namespace StrategyPattern.WebApp.DataAccess
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-
         }
+
+        public DbSet<Product> Products { get; set; }
     }
 }
